@@ -44,3 +44,11 @@ equivalent to
 ```
 curl -X POST -F service=QUsersCordova -F action=get -F args=[["e"]] http://localhost:3005/cordova-request
 ```
+## Common errors
+- __Not found__ - if static content is not found.
+- __Service not found__ - if the web server could not find the service or the structure of the post request was incorrect.
+- __Invalid action execution__ - if the web server could not find the action or the structure of the post request was incorrect.
+- __Gateway timeout__ - if the web server could not execute cordova request within the timeout.
+- __Different callbackId__ - when we run our Cordova request we generate a callbackId, if we get a callbackId different than our callbackId we return an error.
+- __Plugin manager is null__ - something wrong happened after initialization.
+- __Plugin response is null__ - if plugin response is null.
